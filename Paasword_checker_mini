@@ -1,92 +1,40 @@
-import random
-import string
-import datetime
-import time
-import math
-import webbrowser
+# Password Checker
 
-while True:
-    print("\n========== PASSWORD GENERATOR & STRENGTH CHECKER ==========")
-    print("1. Generate Password")
-    print("2. Check Password Strength")
-    print("3. Open Password Safety Tips")
-    print("4. Exit")
+def check_length(password):
+    return len(password) >= 8
 
-    choice = input("Enter your choice: ")
+def check_upper(password):
+    for ch in password:
+        if ch.isupper():
+            return True
+    return False
 
-    if choice == "1":
-        length = int(input("Enter Password Length: "))
+def check_lower(password):
+    for ch in password:
+        if ch.islower():
+            return True
+    return False
 
-        characters = (
-            string.ascii_letters +
-            string.digits +
-            string.punctuation
-        )
+def check_digit(password):
+    for ch in password:
+        if ch.isdigit():
+            return True
+    return False
 
-        print("\nGenerating Password...")
-        time.sleep(2)
+def check_special(password):
+    special = "!@#$%^&*()_+-=[]{}|\\:;\"'<>,.?/~`"
 
-        password = ""
-        for i in range(length):
-            password += random.choice(characters)
+    for ch in password:
+        if ch in special:
+            return True
+    return False
 
-        print("\nGenerated Password:", password)
-        print("Generated On:",
-              datetime.datetime.now().strftime("%d-%m-%Y %I:%M:%S %p"))
+def password_checker():
+    password = input("Enter your password: ")
 
-    elif choice == "2":
-        password = input("Enter Password: ")
-
-        score = 0
-
-        if len(password) >= 8:
-            score += 1
-
-        upper = False
-        lower = False
-        digit = False
-        special = False
-
-        for ch in password:
-            if ch.isupper():
-                upper = True
-            elif ch.islower():
-                lower = True
-            elif ch.isdigit():
-                digit = True
-            else:
-                special = True
-
-        if upper:
-            score += 1
-        if lower:
-            score += 1
-        if digit:
-            score += 1
-        if special:
-            score += 1
-
-        percentage = math.ceil((score / 5) * 100)
-
-        print("\nStrength Score:", percentage, "%")
-
-        if percentage == 100:
-            print("Strength: Very Strong")
-        elif percentage >= 80:
-            print("Strength: Strong")
-        elif percentage >= 60:
-            print("Strength: Medium")
-        else:
-            print("Strength: Weak")
-
-    elif choice == "3":
-        print("Opening Password Safety Tips...")
-        time.sleep(1)
-        webbrowser.open("https://staysafeonline.org")
-
-    elif choice == "4":
-        print("Thank You!")
-        break
-
+    if check_length(password) and check_upper(password) and check_lower(password) and check_digit(password) and check_special(password):
+        print("✅ Strong Password")
     else:
-        print("Invalid Choice!")
+        print("❌ Weak Password")
+
+password_checker()
