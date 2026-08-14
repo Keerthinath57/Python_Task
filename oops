@@ -1,0 +1,192 @@
+# object class
+# class student:
+#     def __init__(self,name,age):
+#         self.name=name
+#         self.age=age
+#
+#     def display(self):
+#         print("Name:",self.name)
+#         print("Age:",self.age)
+#
+# student1=student("Vishrudh",108)
+# student1.display()
+#
+# print(isinstance(student1,student))
+
+# inheritance
+# class Animal:
+#     def eat(self):
+#         print("Animal can eat")
+#
+# class Dog(Animal):
+#     def bark(self):
+#         print("Dog can bark")
+#
+# dog = Dog()
+# dog.eat()
+# dog.bark()
+
+#single inheritance
+# class csk:
+#     def fun1(self):
+#         print("csk team")
+# class Dhoni(csk):
+#     def fun2(self):
+#         print("Goat")
+#
+# a=csk()
+# d=Dhoni()
+# a.fun1()
+# d.fun1()
+# d.fun2()
+
+#hierarchical inheritance
+# class Theatre:
+#     def fun1(self):
+#         print("movies")
+#
+# class dare_devil(Theatre):
+#     def fun2(self):
+#         print("dare devil")
+#
+# class spider_man(Theatre):
+#     def fun3(self):
+#         print("spider man")
+#
+# t=Theatre()
+# d=dare_devil()
+# s=spider_man()
+# t.fun1()
+# d.fun1()
+# d.fun2()
+# s.fun1()
+# s.fun3()
+
+#multilevel inheritance
+# class grandfather:
+#     def fun1(self):
+#         print("family")
+#
+# class father (grandfather):
+#     def fun2(self):
+#         print("father")
+#
+# class son (father):
+#     def fun3(self):
+#         print("son")
+#
+# g=grandfather()
+# f=father()
+# s=son()
+# g.fun1()
+# f.fun1()
+# f.fun2()
+# s.fun1()
+# s.fun2()
+# s.fun3()
+
+#hybrid inheritance
+# class Livewire:
+#     def fun1(self):
+#         print("Livewire")
+# class Mother(Livewire):
+#     def fun2(self):
+#         print("Mother")
+# class Father(Livewire):
+#     def fun3(self):
+#         print("Father")
+# class You(Father,Mother):
+#     def fun4(self):
+#         print("you")
+#
+# L=Livewire()
+# M=Mother()
+# F=Father()
+# Y=You()
+# L.fun1()
+# M.fun1()
+# M.fun2()
+# F.fun1()
+# F.fun3()
+# Y.fun1()
+# Y.fun2()
+# Y.fun3()
+# Y.fun4()
+
+#polymorphism
+#overloading
+
+# class vishrudh:
+#     def add(self,a,b=0,c=0):
+#         return a+b+c
+# v=vishrudh()
+# print(v.add(1))
+# print(v.add(3,6,9))
+# print(v.add(6,6,1))
+
+#*args
+# class Aldrin:
+#     def add(self,*args):
+#         print (sum(args))
+#
+# a= Aldrin()
+# a.add(1)
+# a.add(3,6,9)
+# a.add(1,6,1)
+
+#Abstraction
+# from abc import ABC, abstractmethod
+# class aldrin(ABC):
+#     @abstractmethod
+#     def aldrin(self):
+#         pass
+#
+# class activity(ABC):
+#     def fun1(self):
+#         print("Silent Killer")
+#
+# a=activity()
+# a.fun1()
+
+#encapsulation
+#public
+# class Student:
+#     def __init__(self,name,age):
+#         self.name = name
+#         self.age = age
+# student=Student("Alice",20)
+# print(student.name)
+
+#private
+# class Bank_Account:
+#     def __init__(self,balance):
+#         self.balance = balance
+#     def get_balance(self):
+#         return self.balance
+#     def set_balance(self,amount):
+#         if amount>=0:
+#             self.balance=amount
+#         else:
+#             print(" x invalid amount ")
+# acc=Bank_Account(1000)
+# print("initial balance:",acc.get_balance())
+# acc.set_balance(2000)
+# print("updated balance:",acc.get_balance())
+# acc.set_balance(-500)
+
+# class Demo:
+#     def __init__(self):
+#         self.a = 10
+#         self._b = 20
+#         self.__c = 30
+#
+#     def show(self):
+#         print("public:",self.a)
+#         print("protected:",self._b)
+#         print("private:",self.__c)
+#
+# obj = Demo()
+# print(obj.a)
+# print(obj._b)
+# print(obj._Demo__c)
+# obj.show()
