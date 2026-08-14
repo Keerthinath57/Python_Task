@@ -1,0 +1,88 @@
+# Zero divisor
+# try:
+#     a=int(input("Enter first number: "))
+#     b=int(input("Enter second number: "))
+#     print("Result:",a/b)
+# except ZeroDivisionError:
+#     print("Division Error")
+
+#value error
+# try:
+#     age=int("how old are you?")
+#     print(age)
+# except ValueError:
+#     print("That is not an integer")
+
+#type error
+# try:
+#     a=10+"10"
+#     print(a)
+# except TypeError:
+#     print("Type Error")
+
+# index error
+# try:
+#     a=[1,2,3,5]
+#     print(a[8])
+# except IndexError:
+#     print("Index Error")
+
+# multiple condition
+# try:
+#     a=int(123455)
+# except ValueError:
+#     print("Not valid")
+# except ZeroDivisionError:
+#     print("Zero Division Error")
+#
+# else:
+#     print(a)
+
+# Raise
+# age=10
+# if age<0:
+#     raise ValueError("Age cannot be negative")
+# print("okk")
+
+#File Handling
+# create and write
+# file=open("vinoth.text",'w')
+# file.write("Hello World")
+# file.close()
+# print("Created Successfully")
+
+# Read
+# file=open("vinoth.text","r")
+# a=file.read()
+# print(a)
+# file.close()
+
+#read only 1 line
+# file=open("vinoth.text","r")
+# print(file.readline())
+# file.close()
+# Append
+# file=open("vinoth.txt",'a')
+# file.write("\n Java")
+# file.close()
+# print("Created successfully")
+# file=open("vinoth.text",'r')
+# a=file.read()
+# print(a)
+# file.close()
+
+#Exceptional + File Handling
+# try:
+#     file=open("vinoth.text",'r')
+#     a=file.read()
+#     file.close()
+# except FileNotFoundError:
+#         print("File Not Found")
+
+
+
+
+
+
+
+
