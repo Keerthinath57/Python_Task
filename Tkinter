@@ -1,0 +1,45 @@
+# page creating
+# import tkinter as tk
+# root = tk.Tk()
+# root.title('Balance')
+# root.geometry('300x300')
+# label = tk.Label(root,text='Balance')
+# label.pack(pady=50)
+# root.mainloop()
+
+# Buttons
+# import tkinter as tk
+# def hello():
+#     print("hello")
+# root = tk.Tk()
+# button = tk.Button(root, text="Hello", command=hello)
+# button.pack()
+# root.mainloop()
+
+#Login form
+# import tkinter as tk
+# from tkinter import messagebox
+# 
+# def login():
+#     if user.get() == "admin" and pwd.get() == "1234":
+#         messagebox.showinfo("Login", "Successful")
+#     else:
+#         messagebox.showerror("Login", "Failed")
+# 
+# root = tk.Tk()
+# root.title("Login Portal")
+# 
+# tk.Label(root, text="Username").pack()
+# user = tk.Entry(root)
+# user.pack()
+# 
+# tk.Label(root, text="Password").pack()
+# pwd = tk.Entry(root, show="*")
+# pwd.pack()
+# 
+# tk.Button(root, text="Login", command=login).pack()
+# 
+# root.mainloop()
+
+
+
